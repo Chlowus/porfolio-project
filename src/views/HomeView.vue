@@ -4,7 +4,7 @@
         <div class="home-page-text">
           <h2 class="my-name-is">hi my name is</h2>
           <h1 class="my-name">Chloe Smith</h1>
-          <p class="i-want-to-be">aspiring web developer</p>
+          <p class="i-want-to-be">aspiring full-stack developer</p>
         </div>
 
         <div class="home-button-container">
@@ -196,17 +196,184 @@ export default {
     text-align: center;
 }
 
-@media screen and (max-width: 425) {
-    /* .offcanvas-header { 
+/* @media screen and (max-width: 425) {
+    .offcanvas-header { 
         display: grid;
         grid-template-columns: auto;
         
-    }*/
+    }
     .home-page-container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         overflow: hidden;
     }
+} */
+
+@media (max-width: 720px) {
+  .home-page-container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    height: 620px;
+  }
+
+  .home-page-text-container {
+    width: 100vw; /* Occupy full width */
+    height: auto; /* Allow content to dictate height */
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 300px;
+  }
+
+  .home-page-squiggle {
+    display: block;
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    z-index: 0;
+    margin-top: -325px;
+    margin-left: -20px;
+  }
+
+  .home-page-text {
+    position: relative; /* Remove absolute positioning */
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height based on content */
+    margin: 0 auto; /* Center align horizontally */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .my-name-is {
+    font-size: 30px; /* Adjust font size */
+    text-align: center;
+  }
+
+  .my-name {
+    font-size: 50px; /* Adjust font size */
+    text-align: center;
+  }
+
+  .i-want-to-be {
+    font-size: 18px; /* Adjust font size */
+    text-align: center;
+  }
+
+  .home-button-container {
+    position: relative; /* Remove absolute positioning */
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%; /* Full width */
+    margin: 20px auto; /* Center align horizontally with spacing */
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center align items */
+  }
+
+  .linkedin-btn, .cv-btn, .github-btn {
+    margin: 10px; /* Reduce margin between buttons */
+    max-width: 180px; /* Limit maximum width */
+    height: 50px;
+  }
+
+  .chloe-animation {
+    height: auto; /* Allow height to adjust based on content */
+    width: 30%; /* Full width */
+    max-width: 300px; /* Limit maximum width */
+    display: block;
+    margin: 20px auto; /* Center align horizontally with spacing */
+    margin-top: -680px;
 }
+}
+
+
+
+
+/*  */
+
+/*=============================================================================================================================================
+  */
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
+/* =----------------============================================================================================================================ */
+
+
+/*  */
+ 
+@media (max-width: 300px) {
+    .home-page-container {
+      grid-template-columns: 1fr; /* Change to a single column layout */
+      height: 620px;
+    }
+  
+    .home-page-text-container {
+      width: 100vw; /* Occupy full width */
+      height: auto; /* Allow content to dictate height */
+      padding: 20px; /* Add padding for spacing */
+      margin-top: 170px;
+    }
+  
+    .home-page-squiggle {
+      display: block;
+      width: 100vw;
+      height: 70vh;
+      object-fit: cover;
+      z-index: 0;
+      margin-top: -435px;
+      margin-left: -20px;
+    }
+  
+    .home-page-text {
+      position: relative; /* Remove absolute positioning */
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 100%; /* Full width */
+      height: auto; /* Adjust height based on content */
+      margin: 0 auto; /* Center align horizontally */
+      padding: 20px; /* Add padding for spacing */
+    }
+  
+    .my-name-is {
+      font-size: 20px; /* Adjust font size */
+      text-align: center;
+    }
+  
+    .my-name {
+      font-size: 40px; /* Adjust font size */
+      text-align: center;
+    }
+  
+    .i-want-to-be {
+      font-size: 15px; /* Adjust font size */
+      text-align: center;
+    }
+  
+    .home-button-container {
+      position: relative; /* Remove absolute positioning */
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 100%; /* Full width */
+      margin: 20px auto; /* Center align horizontally with spacing */
+      display: flex;
+      flex-wrap: wrap; /* Allow buttons to wrap */
+      justify-content: center; /* Center align items */
+    }
+  
+    .linkedin-btn, .cv-btn, .github-btn {
+      margin: 10px; /* Reduce margin between buttons */
+      max-width: 180px; /* Limit maximum width */
+      height: 50px;
+    }
+  
+    .chloe-animation {
+      height: auto; /* Allow height to adjust based on content */
+      width: 40%; /* Full width */
+      max-width: 300px; /* Limit maximum width */
+      display: block;
+      margin: 20px auto; /* Center align horizontally with spacing */
+      margin-top: -625px;
+  }
+  }
 </style>

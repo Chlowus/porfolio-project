@@ -39,6 +39,7 @@ export default createStore({
       try{
         let{aboutMe}= await (await axios.get(portfolioURL)).data
         context.commit('setAboutMe', aboutMe)
+        console.log(aboutMe)
       } catch (e) {
         Swal.fire({
           title:'Error',
