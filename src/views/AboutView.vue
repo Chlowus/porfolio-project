@@ -49,7 +49,8 @@ export default {
     background-image: url("https://chlowus.github.io/Images---Bootstrap-Project/Orange%20Squiggle.png");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
+    height: 100%;
 }
 
 .about-container {
@@ -105,6 +106,60 @@ export default {
     text-align: center;
 }
 
+@media screen and (max-width: 300px) {
+  .about-page-main {
+    height: 100%;
+  }
+
+  .about-container-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .chloe-picture {
+    max-width: 25%;
+    height: 65%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 2.5rem;
+    margin-top: 9px;
+  }
+
+  .about-text-container {
+    height: 200vh;
+  }
+
+  .about-text-paragraph {
+    background-color: #ffd9a58a;
+    height: 324px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 20px !important;
+    margin: 40px;
+    margin-top: -90px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+  .about-text-paragraph p{
+    font-size: 10px;
+    font-family: Libre Franklin;
+    text-align: center;
+  }
+}
+
+/* =================================================== */
+/* ================================================================ */
+/* ============================================================================ */
+/* =================================================================================================================== */
+/* ============================================================================ */
+/* ================================================================ */
+/* ======================================================= */
+
 
 @media screen and (max-width: 720px) {
   .about-page-main {
@@ -140,6 +195,8 @@ export default {
     margin: 40px;
     margin-top: -90px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   
