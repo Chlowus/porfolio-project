@@ -18,7 +18,7 @@
                             <router-link class="nav-link" to="/">Home</router-link>
                           </li>
                         <li class="nav-item" @click="changeColor('orange')">
-                        <router-link class="nav-link active" aria-current="page" to="/about">About</router-link>
+                        <router-link class="nav-link" aria-current="page" to="/about">About</router-link>
                       </li>
                       <li class="nav-item" @click="changeColor('pink')">
                         <router-link class="nav-link" to="/resume">Resume</router-link>
@@ -58,11 +58,13 @@ export default {
     font-size: 30px;
 }
 
-.nav-link {
+li .nav-link {
     font-family: Libre Franklin;
     font-size: 40px;
     font-weight: 700;
     color: white;
+    display: flex;
+    justify-content: flex-start;
 }
 
   .header {

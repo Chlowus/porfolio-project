@@ -5,12 +5,12 @@ const portfolioURL = 'https://chlowus.github.io/first-API/data/'
 
 export default createStore({
   state: {
-    aboutMe: null,
-    projects: null,
+    aboutMe: [],
+    projects: [],
     skills: null,
-    education: null,
+    education: [],
     workExperience: null,
-    testimonials: null
+    testimonials: []
   },
   getters: {
   },
@@ -51,6 +51,7 @@ export default createStore({
     async fetchEducation(context){
       try{
         let{education}= await (await axios.get(portfolioURL)).data
+        console.log(education);
         context.commit('setEducation', education)
       } catch (e) {
         Swal.fire({
@@ -74,6 +75,31 @@ export default createStore({
         })
       }
     },
+    async fetchProjects(context){
+      try{
+        let{projects}= await (await axios.get(portfolioURL)).data
+        console.log(projects);
+        context.commit('setProjects', projects)
+      } catch (e) {
+        Swal.fire({
+          description:'Error',
+          title: 'Failed to fetch projects data',
+          icon: 'error'
+        })
+      }
+    },
+    async fetchTestimonials(context){
+      try{
+        let {testimonials} = await (await axios.get(portfolioURL)).data
+        context.commit('setTestimonials', testimonials) 
+      }catch(e) {
+        Swal.fire({
+          description:'Error',
+          title: 'Failed to fetch testimonial data',
+          icon: 'error'
+        })
+      }
+    }
   },
   modules: {
   }

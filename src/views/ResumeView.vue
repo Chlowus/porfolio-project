@@ -1,6 +1,5 @@
 <template lang="">
     <main class="resume-page-main">
-        
 
         <div>
           
@@ -12,56 +11,23 @@
         data-aos-duration="3000">   
               <!--Life Choices-->
               <div v-for="education in getEducation()" :key="education" class="lc-container">
-                 <!-- <h3>{{institution}}{{year}}</h3> -->
-                 <h3>{{education.institution}}{{education.year}}</h3>
+                 <h3>{{education.institution}}  {{education.year}}</h3>
                  <div class="lc-box">
-                  <!-- <p>At Life Choices, I'm gaining proficiency in full-stack web development alongside essential 21st-century skills. The hands-on work experience, whether in LC Studio or with external partners, provides real-world exposure to client projects. With guidance from Life Choices' placement team, I'm poised for a successful transition from internship to employment, equipped to excel in the ICT sector.</p> -->
+                  <p id="para">
+                      {{education.description}}
+                  </p>
                  </div>
+                 <!-- LINE -->
+                 <br>
+                 <div class="line"></div>
               </div>
+              <br> 
+              <a href="#">
+                  <button class="button">
+                    Back to the Top
+                    </button>
+              </a>
 
-              <!-- LINE -->
-              <div class="line"></div>
-
-              <!-- Events Place -->
-              <div class="ep-container">
-                <h3>The Events Place: May 2023 - March 2024</h3>
-                <div class="ep-box">
-                 <p>At The Events Place, I honed my skills as an event planner with a focus on alleviating the stress and frustrations often associated with planning significant occasions. Drawing from personal experiences, including my own wedding day, I understand the importance of having a supportive team and expert guidance throughout the planning process.
-                  <br>
-                  <br>
-                  My firsthand knowledge of the challenges faced by clients allows me to offer invaluable assistance in selecting service providers, managing family dynamics, and ensuring a seamless event experience. With years of experience in the events industry, I am dedicated to helping clients avoid common pitfalls and execute flawless weddings and corporate events.</p>
-                </div>
-              </div>
-
-              <div class="line"></div>
-
-              <!-- BNI -->
-              <div class="bni-container">
-                <h3>BNI: September 2023 - March 2024</h3>
-                <div class="bni-box">
-                 <p>As a representative of The Events Place in BNI, I experienced the power of building trusted relationships in business. BNI provided a platform for exchanging referrals and fostering connections with professionals from diverse industries. Through BNI, I gained colleagues, business partners, and friends who contributed to my professional growth and success.</p>
-                </div>
-              </div>
-
-              <div class="line"></div>
-
-              <!-- ARCC -->
-              <div class="arcc-container">
-                <h3>ARCC: December 2022 - April 2023</h3>
-                <div class="arcc-box">
-                 <p>As an intern at ARCC, I gained valuable skills in quantity surveying and construction project management. Working alongside experienced professionals, I learned to accurately estimate project costs, manage budgets, and analyze construction plans. Additionally, I developed proficiency in using industry-standard software for quantity take-offs and cost estimations. My internship at ARCC provided hands-on experience and enhanced my ability to contribute effectively to construction projects.</p>
-                </div>
-              </div>
-
-              <div class="line"></div>
-
-              <!-- wynberg girls -->
-              <div class="wghs-container">
-                <h3>Wynberg Girls' High School: 2018 - 2022</h3>
-                <div class="wghs-box">
-                 <p>At Wynberg Girls' High School, I received a comprehensive education in a supportive and empowering environment. Founded in 1886, Wynberg Girls' High School is one of the oldest all-girls schools in South Africa, situated in Wynberg, Cape Town. Throughout my time there, I benefited from a rich academic curriculum, dedicated teachers, and a vibrant school community. Wynberg Girls' High School provided me with a solid foundation for academic achievement and personal growth, preparing me for success in my future endeavors.</p>
-                </div>
-              </div>
         </div>
     </div>
 </div>     
@@ -86,23 +52,23 @@ export default {
 }
 </script>
 <style scoped>
-    resume-page-body {
+.resume-page-body {
     /* overflow: hidden; */
-    max-height: 310vh;
+    max-height: 390vh;
     font-family: Bitter;
 }
 
-.resume-page-body {
+.resume-page-main {
     background-image: url("https://chlowus.github.io/Images---Bootstrap-Project/Pink-squiggle.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
-    height: 310vh;
+    height: 390vh;
     background-attachment: fixed;
 }
 
 .resume-page-main {
-    height: 310vh;
+    height: 390vh;
 }
 
 .resume-container {
@@ -142,21 +108,28 @@ export default {
 }
 
 .lc-box {
-    height: 170px;
-    width: 700px;
+    height: 240px;
+    width: 750px;
     border-radius: 30px;
     border: #B38ECC solid 2px;
     background-color: #fcc5d3c0;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-left: 30px;
+    padding-right: 30px;
+    /* padding-top: 30px; */
 }
 
-.lc-box p {
+.lc-box #para {
     text-align: center;
-    font-family: Libre Franklin;
+    font-family: 'Libre Franklin', sans-serif; /* Make sure to enclose font name in quotes if it has spaces */
     color: black;
     padding: 20px;
+    margin: 0; /* Remove default margins */
 }
 
 .line{
@@ -282,5 +255,99 @@ export default {
     background-color: #b38eccd0;
     text-align: center;
     
+}
+.button {
+  position: relative;
+  padding: 20px 52px;
+  border-radius: 26px;
+  border: 3px solid #B38ECC;
+  color: #B38ECC;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #FCC5D3;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
 }
 </style>

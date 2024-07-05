@@ -6,8 +6,8 @@
     <router-view />
   </main>
   <!-- Footer -->
-   <FooterComp/>
-  </div>
+</div>
+<FooterComp/>
 </template>
 <script>
 import NavBarComp from '@/components/NavBarComp.vue'

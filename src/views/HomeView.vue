@@ -11,7 +11,7 @@
           <a target="_blank" href="https://www.linkedin.com/in/chloe-smith-1b0400294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
           <button class="linkedin-btn">Linkedin</button>
         </a>
-        <a target="_blank" href="https://chlowus.github.io/Images---Bootstrap-Project/Chloe%20cv.pdf">
+        <a target="_blank" href="https://chlowus.github.io/Images---Bootstrap-Project/Chloe%20cv.pdf" download>
           <button class="cv-btn">CV</button>
         </a>
         <a target="_blank" href="https://github.com/Chlowus">
