@@ -26,6 +26,9 @@
                       <li class="nav-item" @click="changeColor('blue')">
                         <router-link class="nav-link" to="/skills">Skills</router-link>
                       </li>
+                      <li class="nav-item" @click="changeColor('green')">
+                        <router-link class="nav-link" to="/testimonials">Testimonials</router-link>
+                      </li>
                     </ul>
                   </div>
                 </div>
