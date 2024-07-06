@@ -32,7 +32,9 @@
                       <li class="nav-item" @click="changeColor('orange')">
                         <router-link class="nav-link" to="/projects">Projects</router-link>
                       </li>
-                      
+                      <li class="nav-item" @click="changeColor('pink')">
+                        <router-link class="nav-link" to="/contact">Contact</router-link>
+                      </li>
                     </ul>
                   </div>
                 </div>
