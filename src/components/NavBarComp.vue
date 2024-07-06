@@ -17,6 +17,9 @@
                         <li class="nav-item" @click="changeColor('green')">
                             <router-link class="nav-link" to="/">Home</router-link>
                           </li>
+                          <li class="nav-item" @click="changeColor('orange')">
+                        <router-link class="nav-link" aria-current="page" to="/about">About</router-link>
+                      </li>
                     </ul>
                   </div>
                 </div>
