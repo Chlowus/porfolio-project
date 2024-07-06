@@ -1,5 +1,5 @@
 <template>
-    <div id="green" class="navbar-column dynamic-navbar">
+    <div id="green" class="navbar-column dynamic-navbar sticky-top">
     <nav class="navbar bg-body-tertiary">
               <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -17,24 +17,6 @@
                         <li class="nav-item" @click="changeColor('green')">
                             <router-link class="nav-link" to="/">Home</router-link>
                           </li>
-                        <li class="nav-item" @click="changeColor('orange')">
-                        <router-link class="nav-link" aria-current="page" to="/about">About</router-link>
-                      </li>
-                      <li class="nav-item" @click="changeColor('pink')">
-                        <router-link class="nav-link" to="/resume">Resume</router-link>
-                      </li>
-                      <li class="nav-item" @click="changeColor('blue')">
-                        <router-link class="nav-link" to="/skills">Skills</router-link>
-                      </li>
-                      <li class="nav-item" @click="changeColor('green')">
-                        <router-link class="nav-link" to="/testimonials">Testimonials</router-link>
-                      </li>
-                      <li class="nav-item" @click="changeColor('orange')">
-                        <router-link class="nav-link" to="/projects">Projects</router-link>
-                      </li>
-                      <li class="nav-item" @click="changeColor('pink')">
-                        <router-link class="nav-link" to="/contact">Contact</router-link>
-                      </li>
                     </ul>
                   </div>
                 </div>

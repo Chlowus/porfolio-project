@@ -7,11 +7,11 @@
   </main>
   <!-- Footer -->
 </div>
-<FooterComp/>
+
 </template>
 <script>
 import NavBarComp from '@/components/NavBarComp.vue'
-import FooterComp from '@/components/FooterComp.vue'
+
 // import HomeView from '@/views/HomeView.vue'
 export default{
   methods: {
@@ -25,7 +25,6 @@ export default{
   },
   components:{
     NavBarComp,
-    FooterComp
   },
   mounted() {
     this.changeColor();
@@ -126,6 +125,4 @@ nav a.router-link-exact-active {
 #blue .offcanvas-header {
     background-color:#AADCEC !important;
 }
-
-
 </style>
